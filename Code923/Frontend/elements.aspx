@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="main">
+<div class="main">
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">

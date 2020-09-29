@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="hxsd_DbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Copyrights">
+          <Key>
+            <PropertyRef Name="Copyrights_Id" />
+          </Key>
+          <Property Name="Copyrights_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Copyrights_Title" Type="varchar" MaxLength="255" />
+          <Property Name="Copyrights_Details" Type="varchar" MaxLength="255" />
+          <Property Name="Copyrights_Tel" Type="varchar" MaxLength="255" />
+          <Property Name="Copyrights_Mobile" Type="varchar" MaxLength="255" />
+          <Property Name="Copyrights_QQ" Type="varchar" MaxLength="255" />
+          <Property Name="Copyrights_QQ2" Type="varchar" MaxLength="255" />
+          <Property Name="Copyrights_Email" Type="varchar" MaxLength="255" />
+          <Property Name="Copyrights_Logo" Type="varchar" MaxLength="255" />
+          <Property Name="Copyrights_Image" Type="varchar" MaxLength="255" />
+          <Property Name="Copyrights_Address" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="FriendShips">
+          <Key>
+            <PropertyRef Name="FriendShips_Id" />
+          </Key>
+          <Property Name="FriendShips_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FriendShips_Title" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FriendShips_Link" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="FriendShips_DeleteId" Type="int" />
+          <Property Name="FriendShips_CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="FriendShips_UpdateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Roles_Id" />
+          </Key>
+          <Property Name="Roles_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Roles_Title" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Roles_DeleteId" Type="int" />
+          <Property Name="Roles_CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="Roles_UpdateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Seos">
+          <Key>
+            <PropertyRef Name="Seos_Id" />
+          </Key>
+          <Property Name="Seos_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Seos_Title" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Seos_Keyword" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Seos_Description" Type="varchar" MaxLength="2000" Nullable="false" />
+          <Property Name="Seos_DeleteId" Type="int" />
+          <Property Name="Seos_CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="Seos_UpdateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SystemMenus">
+          <Key>
+            <PropertyRef Name="SystemMenus_Id" />
+          </Key>
+          <Property Name="SystemMenus_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SystemMenus_Title" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SystemMenus_Link" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="SystemMenus_ParentId" Type="uniqueidentifier" />
+          <Property Name="SystemMenus_Icon" Type="varchar" MaxLength="255" />
+          <Property Name="SystemMenus_DeleteId" Type="int" />
+          <Property Name="SystemMenus_CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="SystemMenus_UpdateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Users_Id" />
+          </Key>
+          <Property Name="Users_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Users_Account" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Users_Password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Users_NickName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Users_Photo" Type="varchar" MaxLength="255" />
+          <Property Name="Users_RolesId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Users_DeleteId" Type="int" />
+          <Property Name="Users_CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="Users_UpdateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsersPermissions">
+          <Key>
+            <PropertyRef Name="UsersPermissions_Id" />
+          </Key>
+          <Property Name="UsersPermissions_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UsersPermissions_RolesId" Type="uniqueidentifier" />
+          <Property Name="UsersPermissions_SystemMenuId" Type="uniqueidentifier" />
+          <Property Name="UsersPermissions_DeleteId" Type="int" />
+          <Property Name="UsersPermissions_CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="UsersPermissions_UpdateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WebMenus">
+          <Key>
+            <PropertyRef Name="WebMenus_Id" />
+          </Key>
+          <Property Name="WebMenus_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="WebMenus_Title" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="WebMenus_Link" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="WebMenus_ParentId" Type="uniqueidentifier" />
+          <Property Name="WebMenus_Icon" Type="varchar" MaxLength="255" />
+          <Property Name="WebMenus_DeleteId" Type="int" />
+          <Property Name="WebMenus_CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="WebMenus_UpdateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="hxsd_DbModel1StoreContainer">
+          <EntitySet Name="Copyrights" EntityType="Self.Copyrights" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FriendShips" EntityType="Self.FriendShips" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Seos" EntityType="Self.Seos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemMenus" EntityType="Self.SystemMenus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsersPermissions" EntityType="Self.UsersPermissions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WebMenus" EntityType="Self.WebMenus" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hxsd_DbModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Copyrights">
+          <Key>
+            <PropertyRef Name="Copyrights_Id" />
+          </Key>
+          <Property Name="Copyrights_Id" Type="Guid" Nullable="false" />
+          <Property Name="Copyrights_Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Copyrights_Details" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Copyrights_Tel" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Copyrights_Mobile" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Copyrights_QQ" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Copyrights_QQ2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Copyrights_Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Copyrights_Logo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Copyrights_Image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Copyrights_Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FriendShips">
+          <Key>
+            <PropertyRef Name="FriendShips_Id" />
+          </Key>
+          <Property Name="FriendShips_Id" Type="Guid" Nullable="false" />
+          <Property Name="FriendShips_Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FriendShips_Link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FriendShips_DeleteId" Type="Int32" />
+          <Property Name="FriendShips_CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FriendShips_UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Roles_Id" />
+          </Key>
+          <Property Name="Roles_Id" Type="Guid" Nullable="false" />
+          <Property Name="Roles_Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Roles_DeleteId" Type="Int32" />
+          <Property Name="Roles_CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Roles_UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Seos">
+          <Key>
+            <PropertyRef Name="Seos_Id" />
+          </Key>
+          <Property Name="Seos_Id" Type="Guid" Nullable="false" />
+          <Property Name="Seos_Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Seos_Keyword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Seos_Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Seos_DeleteId" Type="Int32" />
+          <Property Name="Seos_CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Seos_UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="SystemMenus">
+          <Key>
+            <PropertyRef Name="SystemMenus_Id" />
+          </Key>
+          <Property Name="SystemMenus_Id" Type="Guid" Nullable="false" />
+          <Property Name="SystemMenus_Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SystemMenus_Link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SystemMenus_ParentId" Type="Guid" />
+          <Property Name="SystemMenus_Icon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SystemMenus_DeleteId" Type="Int32" />
+          <Property Name="SystemMenus_CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SystemMenus_UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Users_Id" />
+          </Key>
+          <Property Name="Users_Id" Type="Guid" Nullable="false" />
+          <Property Name="Users_Account" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Users_Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Users_NickName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Users_Photo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Users_RolesId" Type="Guid" Nullable="false" />
+          <Property Name="Users_DeleteId" Type="Int32" />
+          <Property Name="Users_CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Users_UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="UsersPermissions">
+          <Key>
+            <PropertyRef Name="UsersPermissions_Id" />
+          </Key>
+          <Property Name="UsersPermissions_Id" Type="Guid" Nullable="false" />
+          <Property Name="UsersPermissions_RolesId" Type="Guid" />
+          <Property Name="UsersPermissions_SystemMenuId" Type="Guid" />
+          <Property Name="UsersPermissions_DeleteId" Type="Int32" />
+          <Property Name="UsersPermissions_CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsersPermissions_UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="WebMenus">
+          <Key>
+            <PropertyRef Name="WebMenus_Id" />
+          </Key>
+          <Property Name="WebMenus_Id" Type="Guid" Nullable="false" />
+          <Property Name="WebMenus_Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WebMenus_Link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WebMenus_ParentId" Type="Guid" />
+          <Property Name="WebMenus_Icon" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="WebMenus_DeleteId" Type="Int32" />
+          <Property Name="WebMenus_CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="WebMenus_UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="hxsd_DbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Copyrights" EntityType="Self.Copyrights" />
+          <EntitySet Name="FriendShips" EntityType="Self.FriendShips" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="Seos" EntityType="Self.Seos" />
+          <EntitySet Name="SystemMenus" EntityType="Self.SystemMenus" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="UsersPermissions" EntityType="Self.UsersPermissions" />
+          <EntitySet Name="WebMenus" EntityType="Self.WebMenus" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hxsd_DbModel1StoreContainer" CdmEntityContainer="hxsd_DbEntities1">
+          <EntitySetMapping Name="Copyrights">
+            <EntityTypeMapping TypeName="hxsd_DbModel1.Copyrights">
+              <MappingFragment StoreEntitySet="Copyrights">
+                <ScalarProperty Name="Copyrights_Id" ColumnName="Copyrights_Id" />
+                <ScalarProperty Name="Copyrights_Title" ColumnName="Copyrights_Title" />
+                <ScalarProperty Name="Copyrights_Details" ColumnName="Copyrights_Details" />
+                <ScalarProperty Name="Copyrights_Tel" ColumnName="Copyrights_Tel" />
+                <ScalarProperty Name="Copyrights_Mobile" ColumnName="Copyrights_Mobile" />
+                <ScalarProperty Name="Copyrights_QQ" ColumnName="Copyrights_QQ" />
+                <ScalarProperty Name="Copyrights_QQ2" ColumnName="Copyrights_QQ2" />
+                <ScalarProperty Name="Copyrights_Email" ColumnName="Copyrights_Email" />
+                <ScalarProperty Name="Copyrights_Logo" ColumnName="Copyrights_Logo" />
+                <ScalarProperty Name="Copyrights_Image" ColumnName="Copyrights_Image" />
+                <ScalarProperty Name="Copyrights_Address" ColumnName="Copyrights_Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FriendShips">
+            <EntityTypeMapping TypeName="hxsd_DbModel1.FriendShips">
+              <MappingFragment StoreEntitySet="FriendShips">
+                <ScalarProperty Name="FriendShips_Id" ColumnName="FriendShips_Id" />
+                <ScalarProperty Name="FriendShips_Title" ColumnName="FriendShips_Title" />
+                <ScalarProperty Name="FriendShips_Link" ColumnName="FriendShips_Link" />
+                <ScalarProperty Name="FriendShips_DeleteId" ColumnName="FriendShips_DeleteId" />
+                <ScalarProperty Name="FriendShips_CreateTime" ColumnName="FriendShips_CreateTime" />
+                <ScalarProperty Name="FriendShips_UpdateTime" ColumnName="FriendShips_UpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="hxsd_DbModel1.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Roles_Id" ColumnName="Roles_Id" />
+                <ScalarProperty Name="Roles_Title" ColumnName="Roles_Title" />
+                <ScalarProperty Name="Roles_DeleteId" ColumnName="Roles_DeleteId" />
+                <ScalarProperty Name="Roles_CreateTime" ColumnName="Roles_CreateTime" />
+                <ScalarProperty Name="Roles_UpdateTime" ColumnName="Roles_UpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seos">
+            <EntityTypeMapping TypeName="hxsd_DbModel1.Seos">
+              <MappingFragment StoreEntitySet="Seos">
+                <ScalarProperty Name="Seos_Id" ColumnName="Seos_Id" />
+                <ScalarProperty Name="Seos_Title" ColumnName="Seos_Title" />
+                <ScalarProperty Name="Seos_Keyword" ColumnName="Seos_Keyword" />
+                <ScalarProperty Name="Seos_Description" ColumnName="Seos_Description" />
+                <ScalarProperty Name="Seos_DeleteId" ColumnName="Seos_DeleteId" />
+                <ScalarProperty Name="Seos_CreateTime" ColumnName="Seos_CreateTime" />
+                <ScalarProperty Name="Seos_UpdateTime" ColumnName="Seos_UpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemMenus">
+            <EntityTypeMapping TypeName="hxsd_DbModel1.SystemMenus">
+              <MappingFragment StoreEntitySet="SystemMenus">
+                <ScalarProperty Name="SystemMenus_Id" ColumnName="SystemMenus_Id" />
+                <ScalarProperty Name="SystemMenus_Title" ColumnName="SystemMenus_Title" />
+                <ScalarProperty Name="SystemMenus_Link" ColumnName="SystemMenus_Link" />
+                <ScalarProperty Name="SystemMenus_ParentId" ColumnName="SystemMenus_ParentId" />
+                <ScalarProperty Name="SystemMenus_Icon" ColumnName="SystemMenus_Icon" />
+                <ScalarProperty Name="SystemMenus_DeleteId" ColumnName="SystemMenus_DeleteId" />
+                <ScalarProperty Name="SystemMenus_CreateTime" ColumnName="SystemMenus_CreateTime" />
+                <ScalarProperty Name="SystemMenus_UpdateTime" ColumnName="SystemMenus_UpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="hxsd_DbModel1.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Users_Id" ColumnName="Users_Id" />
+                <ScalarProperty Name="Users_Account" ColumnName="Users_Account" />
+                <ScalarProperty Name="Users_Password" ColumnName="Users_Password" />
+                <ScalarProperty Name="Users_NickName" ColumnName="Users_NickName" />
+                <ScalarProperty Name="Users_Photo" ColumnName="Users_Photo" />
+                <ScalarProperty Name="Users_RolesId" ColumnName="Users_RolesId" />
+                <ScalarProperty Name="Users_DeleteId" ColumnName="Users_DeleteId" />
+                <ScalarProperty Name="Users_CreateTime" ColumnName="Users_CreateTime" />
+                <ScalarProperty Name="Users_UpdateTime" ColumnName="Users_UpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersPermissions">
+            <EntityTypeMapping TypeName="hxsd_DbModel1.UsersPermissions">
+              <MappingFragment StoreEntitySet="UsersPermissions">
+                <ScalarProperty Name="UsersPermissions_Id" ColumnName="UsersPermissions_Id" />
+                <ScalarProperty Name="UsersPermissions_RolesId" ColumnName="UsersPermissions_RolesId" />
+                <ScalarProperty Name="UsersPermissions_SystemMenuId" ColumnName="UsersPermissions_SystemMenuId" />
+                <ScalarProperty Name="UsersPermissions_DeleteId" ColumnName="UsersPermissions_DeleteId" />
+                <ScalarProperty Name="UsersPermissions_CreateTime" ColumnName="UsersPermissions_CreateTime" />
+                <ScalarProperty Name="UsersPermissions_UpdateTime" ColumnName="UsersPermissions_UpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WebMenus">
+            <EntityTypeMapping TypeName="hxsd_DbModel1.WebMenus">
+              <MappingFragment StoreEntitySet="WebMenus">
+                <ScalarProperty Name="WebMenus_Id" ColumnName="WebMenus_Id" />
+                <ScalarProperty Name="WebMenus_Title" ColumnName="WebMenus_Title" />
+                <ScalarProperty Name="WebMenus_Link" ColumnName="WebMenus_Link" />
+                <ScalarProperty Name="WebMenus_ParentId" ColumnName="WebMenus_ParentId" />
+                <ScalarProperty Name="WebMenus_Icon" ColumnName="WebMenus_Icon" />
+                <ScalarProperty Name="WebMenus_DeleteId" ColumnName="WebMenus_DeleteId" />
+                <ScalarProperty Name="WebMenus_CreateTime" ColumnName="WebMenus_CreateTime" />
+                <ScalarProperty Name="WebMenus_UpdateTime" ColumnName="WebMenus_UpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

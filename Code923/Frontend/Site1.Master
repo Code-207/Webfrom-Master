@@ -1,10 +1,10 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Code923.Site1" %>
 
-<!DOCTYPE html>
+<!DOCTYPE aspx>
 
-<html>
+<aspx>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/aspx; charset=utf-8"/>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -14,7 +14,7 @@
         <div id="wrapper">
             		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="index.aspx"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -76,24 +76,24 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="index.html" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="elements.html" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
-						<li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
-						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+						<li><a href="index.aspx" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="elements.aspx" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
+						<li><a href="charts.aspx" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+						<li><a href="panels.aspx" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
+						<li><a href="notifications.aspx" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
 						<li>
 							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
-									<li><a href="page-profile.html" class="">Profile</a></li>
-									<li><a href="page-login.html" class="">Login</a></li>
-									<li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+									<li><a href="page-profile.aspx" class="">Profile</a></li>
+									<li><a href="page-login.aspx" class="">Login</a></li>
+									<li><a href="page-lockscreen.aspx" class="">Lockscreen</a></li>
 								</ul>
 							</div>
 						</li>
-						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-						<li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-						<li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+						<li><a href="tables.aspx" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
+						<li><a href="typography.aspx" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
+						<li><a href="icons.aspx" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
 					</ul>
 				</nav>
 			</div>
@@ -103,4 +103,4 @@
         </div>
     </form>
 </body>
-</html>
+</aspx>
